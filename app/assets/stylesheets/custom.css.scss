@@ -1,0 +1,40 @@
+@import "bootstrap";
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+}
+
+#logo{
+    float: left;
+    margin-right: 10px;
+    font-size: 1.5em;
+    text-transform: uppercase; 
+    letter-spacing: -1px; 
+    padding-top: 9px;
+    
+}
+
+p{
+    font-size: 1.1em;
+    line-height: 1.7em;
+}
+
+.container{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.footer{
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.static{
+    padding-top: 50px;
+    text-align: center;
+}

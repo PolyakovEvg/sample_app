@@ -7,41 +7,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "custom", "data-turbo-track": "reload" %>
+  
+    
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
-  <header>
-  <nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <div class="navbar-brand">
-      <%=link_to 'Sample app', '#', id: 'logo'%>
+    <%= render 'layouts/header'%>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer'%>
     </div>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item nav-link">
-          <%=link_to "Help", '#'%>
-        </li>
-        
-        <li class="nav-item nav-link">
-          <%=link_to "About", '#'%>
-        </li>
-        <li class="nav-item nav-link">
-         <%=link_to "Log in", '#'%>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-  </header>
-  <div class="container">
-    <%= yield %>
-    <end>
   </body>
 </html>
